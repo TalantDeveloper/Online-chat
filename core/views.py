@@ -23,7 +23,7 @@ def signup(request):
     return render(request, 'core/signup.html', {'form': form})
 
 
-def loginview(request):
+def login_view(request):
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['password']
