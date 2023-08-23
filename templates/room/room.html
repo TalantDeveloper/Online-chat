@@ -14,12 +14,19 @@
                 {% for message in messagess %}
                     <div class="p-4 bg-gray-200 rounded-xl">
                     {% if message.user == request.user %}
-                        <b><p class="font-semibold" style="color: darkcyan;">{{ message.user.username }}</p></b>
+                        <b>
+                            <p class="font-semibold" style="color: darkcyan;">
+                                {{ message.user.username }}
+                            </p>
+                        </b>
                         {% else %}
                         <p class="font-semibold">{{ message.user.username }}</p>
                     {% endif %}
 
-                        <p style="display: inline">{{ message.content }}</p><b><small style="display: inline; float: right; color: darkcyan;">{{ message.date_added|timesince }}</small></b>
+                        <p style="display: inline">{{ message.content }}</p>
+                        <b>
+                            <small style="display: inline; float: right; color: darkcyan;">{{ message.date_added|timesince }}</small>
+                        </b>
                     </div>
                 {% empty %}
                     <div class="p-4 bg-gray-200 rounded-xl">
@@ -31,7 +38,6 @@
             </div>
         </div>
     </div>
-
     <div class="lg:w-2/4 mt-6 mx-4 lg:mx-auto p-4 bg-white rounded-xl">
         <form action="." method="post" class="flex">
 
