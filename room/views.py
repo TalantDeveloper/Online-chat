@@ -27,6 +27,10 @@ def rooms_view(request):
 def room_view(request, slug):
     """user ender room slug and this view room all message and user send many message of room."""
     room = Room.objects.get(slug=slug)
+    if request.method == 'POST':
+        content = request.POST.get('content')
+        message = Message.objects.create(room=room, user=request.user, content=content)
+        message.save()
     messages = Message.objects.filter(room=room)
 
     return render(request, 'room/room.html', {'room': room, "messagess": messages})
