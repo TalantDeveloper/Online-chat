@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Pipenv (djangochat)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10 (onlinecaht-xlyVZDrq)" project-jdk-type="Python SDK" />
+>>>>>>> c76b826e9f2a1ef3084e70e157331108633dc2f6
 </project>
